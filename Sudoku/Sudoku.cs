@@ -44,7 +44,8 @@ namespace Sudoku
             // First check for occurence of num in current row and column
             for(int i =0; i <9;i++)
             {
-                if ((gameRes[i,column]==num) ||(gameRes[row,i] == num))
+                // Dont need to check the position what the number is inserted, but the column and row of the given position
+                if ((i!= row && gameRes[i,column]==num) ||(i != column && gameRes[row,i] == num)) // // Skip candidate position
                     return false;
             }
 
@@ -59,7 +60,8 @@ namespace Sudoku
             {
                 for (int col = blockColumn; col < blockColumn +3; col++)
                 {
-                    if (gameRes[rw,col] == num)
+                    // Dont need to check the position what the number is inserted, but the column and row of the given position
+                    if ((row !=rw && column!= col) &&(gameRes[rw,col] == num))   // Skip candidate position
                     {
                         return false;
                     }
@@ -71,8 +73,15 @@ namespace Sudoku
         public void GenerateGame(int gameLevel)
         {
             Random random = new Random();
-            gameAnswer = firstSet; // new int[9,9];
-
+           
+            if ((random.Next(1, 11) %2) == 0)
+            {
+                gameAnswer = firstSet; 
+            }
+            else
+            {
+                gameAnswer = secondSet;
+            }
             for (int row = 0; row < 9; row++)
             {
                 for (int col = 0; col < 9; col++)

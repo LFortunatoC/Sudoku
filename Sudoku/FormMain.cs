@@ -104,7 +104,7 @@ namespace Sudoku
             frmNumber.Dispose();
         }
 
-        private void buttonNew_Click(object sender, EventArgs e)
+        private void ButtonNew_Click(object sender, EventArgs e)
         {
             int gameLevel = comboBoxLevel.SelectedIndex>=0? comboBoxLevel.SelectedIndex:0;
             mySudoku.GenerateGame(gameLevel);
@@ -148,12 +148,12 @@ namespace Sudoku
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ButtonSolve_Click(object sender, EventArgs e)
         {
             Solve(mySudoku);
         }
 
-        private void buttonRestart_Click(object sender, EventArgs e)
+        private void ButtonRestart_Click(object sender, EventArgs e)
         {
             LoadGame(mySudoku);
         }

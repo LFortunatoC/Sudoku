@@ -45,7 +45,7 @@
             this.buttonNew.TabIndex = 0;
             this.buttonNew.Text = "New Game";
             this.buttonNew.UseVisualStyleBackColor = true;
-            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            this.buttonNew.Click += new System.EventHandler(this.ButtonNew_Click);
             // 
             // comboBoxLevel
             // 
@@ -93,7 +93,7 @@
             this.buttonSolve.TabIndex = 3;
             this.buttonSolve.Text = "Solve";
             this.buttonSolve.UseVisualStyleBackColor = true;
-            this.buttonSolve.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSolve.Click += new System.EventHandler(this.ButtonSolve_Click);
             // 
             // buttonRestart
             // 
@@ -104,7 +104,7 @@
             this.buttonRestart.TabIndex = 2;
             this.buttonRestart.Text = "Restart";
             this.buttonRestart.UseVisualStyleBackColor = true;
-            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
+            this.buttonRestart.Click += new System.EventHandler(this.ButtonRestart_Click);
             // 
             // FormMain
             // 
